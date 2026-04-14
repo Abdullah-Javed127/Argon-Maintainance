@@ -67,6 +67,13 @@ const ResultCard = ({ machine, result }) => {
           border-left: 6px solid var(--primary);
         }
 
+        @media (max-width: 640px) {
+          .result-card {
+            padding: 1.25rem;
+            border-left: 4px solid var(--primary);
+          }
+        }
+
         .result-header {
           display: flex;
           align-items: center;
@@ -74,6 +81,14 @@ const ResultCard = ({ machine, result }) => {
           margin-bottom: 2rem;
           padding-bottom: 1.5rem;
           border-bottom: 1px solid var(--border);
+        }
+
+        @media (max-width: 640px) {
+          .result-header {
+            margin-bottom: 1.25rem;
+            padding-bottom: 1rem;
+            gap: 1rem;
+          }
         }
 
         .machine-icon {
@@ -98,6 +113,12 @@ const ResultCard = ({ machine, result }) => {
           font-weight: 700;
           color: var(--text-main);
           margin: 0.25rem 0 0 0;
+        }
+
+        @media (max-width: 640px) {
+          .title-group p {
+            font-size: 1.25rem;
+          }
         }
 
         .info-grid {

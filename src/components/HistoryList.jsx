@@ -33,6 +33,13 @@ const HistoryList = ({ history, onSelect, onClear }) => {
           border-top: 1px solid var(--border);
         }
 
+        @media (max-width: 640px) {
+          .history-container {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+          }
+        }
+
         .history-header {
           display: flex;
           align-items: center;
@@ -101,7 +108,15 @@ const HistoryList = ({ history, onSelect, onClear }) => {
 
         @media (max-width: 640px) {
           .history-list {
-            flex-direction: column;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.5rem;
+          }
+          
+          .history-item {
+            justify-content: space-between;
+            padding: 0.5rem 0.75rem;
+            font-size: 0.8125rem;
           }
         }
       `}</style>

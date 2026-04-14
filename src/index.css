@@ -38,6 +38,12 @@ body {
   flex: 1;
 }
 
+@media (max-width: 640px) {
+  #root {
+    padding: 1.25rem 1rem;
+  }
+}
+
 button {
   cursor: pointer;
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);

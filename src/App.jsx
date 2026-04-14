@@ -137,6 +137,15 @@ const App = () => {
           padding: 0 1rem;
         }
 
+        @media (max-width: 640px) {
+          .settings-bar {
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 0;
+            margin-bottom: 1rem;
+          }
+        }
+
         .api-status {
           display: flex;
           align-items: center;
@@ -199,10 +208,8 @@ const App = () => {
         }
 
         @media (max-width: 768px) {
-          .settings-bar {
-            flex-direction: column;
-            gap: 1rem;
-            align-items: flex-start;
+          .api-status span {
+            display: none;
           }
         }
       `}</style>

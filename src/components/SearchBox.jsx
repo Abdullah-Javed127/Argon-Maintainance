@@ -52,6 +52,15 @@ const SearchBox = ({ onSearch, isLoading }) => {
           padding: 0.5rem 1rem;
         }
 
+        @media (max-width: 640px) {
+          .search-input-wrapper {
+            flex-direction: column;
+            align-items: stretch;
+            gap: 0.75rem;
+            padding: 1rem;
+          }
+        }
+
         .search-icon {
           color: var(--text-muted);
           transition: color 0.3s ease;
@@ -108,8 +117,22 @@ const SearchBox = ({ onSearch, isLoading }) => {
         }
 
         @media (max-width: 640px) {
+          .search-card {
+            border-radius: 20px;
+          }
+          
           .search-btn {
-            padding: 0.75rem 1rem;
+            width: 100%;
+            padding: 1rem;
+          }
+          
+          input {
+            font-size: 1rem;
+            text-align: center;
+          }
+
+          .search-icon {
+            display: none;
           }
         }
       `}</style>

@@ -25,6 +25,13 @@ const Header = () => {
           padding: 1rem 0;
         }
 
+        @media (max-width: 640px) {
+          .argon-header {
+            margin-bottom: 2rem;
+            padding: 0.5rem 0;
+          }
+        }
+
         .logo-section {
           display: flex;
           align-items: center;
@@ -51,6 +58,12 @@ const Header = () => {
           color: var(--text-main);
           letter-spacing: -0.025em;
           margin: 0;
+        }
+
+        @media (max-width: 640px) {
+          .logo-text h1 {
+            font-size: 1.125rem;
+          }
         }
 
         .logo-text span {
