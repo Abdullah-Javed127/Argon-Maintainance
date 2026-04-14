@@ -10,7 +10,7 @@ import { AlertCircle, LogOut } from 'lucide-react';
 const App = () => {
   const envKey = import.meta.env.VITE_GROQ_API_KEY;
   const isEnvKeyValid = envKey && envKey !== 'your_groq_api_key_here';
-  
+
   const [apiKey, setApiKey] = useState(localStorage.getItem('argon_api_key') || '');
   const [history, setHistory] = useState(() => {
     const saved = localStorage.getItem('argon_history');
@@ -45,7 +45,7 @@ const App = () => {
     try {
       const advice = await getMaintenanceAdvice(machine, apiKey);
       setCurrentResult(advice);
-      
+
       // Update history
       setHistory(prev => {
         const filtered = prev.filter(item => item.machine.toLowerCase() !== machine.toLowerCase());
@@ -104,17 +104,17 @@ const App = () => {
               <ResultCard machine={currentMachine} result={currentResult} />
             )}
 
-            <HistoryList 
-              history={history} 
-              onSelect={handleSelectHistory} 
-              onClear={clearHistory} 
+            <HistoryList
+              history={history}
+              onSelect={handleSelectHistory}
+              onClear={clearHistory}
             />
           </div>
         )}
       </main>
 
       <footer className="argon-footer">
-        <p>© 2024 Argon Maintenance Systems. Powered by Groq AI.</p>
+        <p>© 2025 Argon Maintenance Systems.</p>
       </footer>
 
       <style jsx>{`

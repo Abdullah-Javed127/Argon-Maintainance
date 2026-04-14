@@ -14,10 +14,7 @@ const Header = () => {
         </div>
       </div>
       
-      <nav className="nav-links">
-        <a href="#">Documentation</a>
-        <a href="#">About Argon</a>
-      </nav>
+      
 
       <style jsx>{`
         .argon-header {
@@ -71,28 +68,6 @@ const Header = () => {
           margin: 0;
         }
 
-        .nav-links {
-          display: flex;
-          gap: 2rem;
-        }
-
-        .nav-links a {
-          text-decoration: none;
-          font-size: 0.875rem;
-          font-weight: 600;
-          color: var(--text-muted);
-          transition: color 0.2s ease;
-        }
-
-        .nav-links a:hover {
-          color: var(--primary);
-        }
-
-        @media (max-width: 768px) {
-          .nav-links {
-            display: none;
-          }
-        }
       `}</style>
     </header>
   );
